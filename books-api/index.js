@@ -24,34 +24,30 @@ app.listen(port, () => {
 // Helper Functions
 // ---------------------------------
 
-// 1. getAllBooks()
-// make a helper function that will get the name and descrition of all books
-async function getAllBooks() {
-  // read the data from books-data.json
-  const data = await fs.readFile("books-data.json", "utf8");
-  const parsedBooks = JSON.parse(data);
-  return parsedBooks;
-}
+// // 1. getAllBooks()
+// // make a helper function that will get the name and descrition of all books
+// async function getAllBooks() {
+//   // read the data from books-data.json
+//   const data = await fs.readFile("books-data.json", "utf8");
+//   const parsedBooks = JSON.parse(data);
+//   return parsedBooks;
+// }
 
-// 2. getOneBook(index)
-async function getOneBook(index) {
-  const data = await fs.readFile("books-data.json", "utf8");
-  const parsedBooks = JSON.parse(data);
-  return parsedBooks[index];
-}
+// // 2. getOneBook(index)
+// async function getOneBook(index) {
+//   const data = await fs.readFile("books-data.json", "utf8");
+//   const parsedBooks = JSON.parse(data);
+//   return parsedBooks[index];
+// }
 
-// 3. getOneBookTitle(index)
-async function getOneBookTitle(index) {
-    const data = await fs.readFile("books-data.json", "utf8");
-    const parsedBooks = JSON.parse(data);
-    return parsedBooks[index].title;
-  }
+// // 3. getOneBookTitle(index)
+// async function getOneBookTitle(index) {
+//     const data = await fs.readFile("books-data.json", "utf8");
+//     const parsedBooks = JSON.parse(data);
+//     return parsedBooks[index].title;
+//   }
   
 
-
-// ______________________________________________________________________________
-
-//  -----------------------Code Along with Ariana 3/9/26-------------------------
 
 // ---------------------------------
 // API Endpoints
@@ -85,6 +81,10 @@ app.get("/get-one-book/:index", async (req, res) => {
     res.json(book);
   });
 
+
+  // ______________________________________________________________________________
+
+//  -----------------------Code Along with Ariana 3/9/26 (practicing Error Handling)---------------------------
 
 
   // _________________________________________
